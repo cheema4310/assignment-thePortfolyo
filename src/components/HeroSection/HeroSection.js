@@ -1,9 +1,9 @@
-import Nav from '../Nav';
+import MultiLayer from './MultiLayer';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="h-screen w-full">
-      <Nav />
+    <section id="hero" className="">
+      <MultiLayer />
     </section>
   );
 }

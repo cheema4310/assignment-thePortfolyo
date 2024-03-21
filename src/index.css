@@ -9,6 +9,7 @@
 }
 body {
   background-color: #1a1a1a;
+
   color: #e6e6e6;
 }
 
@@ -23,16 +24,25 @@ body {
     @apply px-2 py-1 text-lighter bg-transparent hover:text-lightest;
   }
   .my-heading {
-    @apply font-modern font-bold text-3xl;
+    @apply font-modern font-bold text-4xl;
+  }
+  .my-heading-6xl {
+    @apply font-modern font-extrabold text-6xl;
   }
   .my-heading-normal {
-    @apply font-heading font-semibold text-xl;
+    @apply font-heading font-semibold text-2xl;
+  }
+  .my-para {
+    @apply font-para font-medium text-base;
   }
   .my-btn {
     @apply py-2 px-6 bg-dark font-btn text-lg font-semibold rounded-lg shadow-lg transition;
   }
   .my-btn-outline {
     @apply py-2 px-6 font-btn bg-transparent rounded-lg shadow-lg transition;
+  }
+  .my-navlink {
+    @apply px-2 py-1 font-btn text-lighter bg-transparent hover:text-lightest;
   }
 }
 

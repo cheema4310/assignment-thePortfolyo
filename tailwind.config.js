@@ -10,6 +10,7 @@ module.exports = {
         dark: '#3D3D3D',
         darker: '#292929',
         darkest: '#1A1A1A',
+        navBg: '#010101',
       },
       fontFamily: {
         heading: ['Poppins', 'sans-serif'],
