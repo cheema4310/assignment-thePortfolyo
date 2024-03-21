@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+
+@layer components {
+  .my-flex {
+    @apply flex justify-center items-center;
+  }
+  .my-flex-col {
+    @apply flex flex-col;
+  }
+  .my-navlink {
+    @apply px-2 py-1 text-lighter bg-transparent hover:text-lightest;
+  }
+  .my-heading {
+    @apply font-modern font-bold text-3xl;
+  }
+  .my-heading-normal {
+    @apply font-heading font-semibold text-xl;
+  }
+  .my-btn {
+    @apply py-2 px-6 bg-dark font-btn text-lg font-semibold rounded-lg shadow-lg transition;
+  }
+  .my-btn-outline {
+    @apply py-2 px-6 font-btn bg-transparent rounded-lg shadow-lg transition;
+  }
+}
+
+/* Google Fonts */
+/* google font */
+/* <weight>: Use a value from 100 to 900 */
+/* font-family: "Exo", sans-serif */
+/* font-family: "Nunito", sans-serif */
+/* font-family: 'Roboto Mono', monospace */
+/* font-family: 'Poppins', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100..900&family=Nunito:wght@200..1000&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@100..700&display=swap');

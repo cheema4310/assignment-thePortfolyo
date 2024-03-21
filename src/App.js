@@ -1,8 +1,21 @@
+import React, { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import LoadingSPinner from './components/shared/LoadingSpinner';
+
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+
 function App() {
   return (
-    <div className="flex justify-center items-center w-full h-screen">
-      Home Page
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<LoadingSPinner asOverlay />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 
