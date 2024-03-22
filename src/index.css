@@ -36,7 +36,7 @@ body {
     @apply font-para font-medium text-base;
   }
   .my-btn {
-    @apply py-2 px-6 bg-dark font-btn text-lg font-semibold rounded-lg shadow-lg transition;
+    @apply py-2 px-6 bg-dark font-btn text-lg font-semibold rounded-lg shadow-lg transition w-fit;
   }
   .my-btn-outline {
     @apply py-2 px-6 font-btn bg-transparent rounded-lg shadow-lg transition;

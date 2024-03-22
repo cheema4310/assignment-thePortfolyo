@@ -1,8 +1,10 @@
 import classes from './LoadingSpinner.module.css';
 
-export default function LoadingSPinner() {
+export default function LoadingSpinner({ asOverlay }) {
   return (
-    <div className={classes['col-sm-2']}>
+    <div
+      className={`${asOverlay && classes.loadingSpinnerOverlay} ${classes.col}`}
+    >
       <div className={`${classes.sp} ${classes['sp-wave']}`}></div>
     </div>
   );
