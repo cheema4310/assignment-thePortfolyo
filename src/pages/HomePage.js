@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import HeroSection from '../components/HeroSection/HeroSection';
-import Slider from '../components/Slider';
+import Slider from '../components/Slider/Slider';
 import LoadingSpinner from '../components/shared/LoadingSpinner';
 
 export default function HomePage() {

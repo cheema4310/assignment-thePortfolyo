@@ -1,0 +1,49 @@
+.slider:before,
+.slider:after {
+  background: linear-gradient(
+    to right,
+    rgba(26, 26, 26, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 7%;
+
+  z-index: 2;
+}
+
+.slider:after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider:before {
+  left: 0;
+  top: 0;
+}
+.slideTrack {
+  animation: sliding 800s linear infinite;
+}
+
+.slideTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
