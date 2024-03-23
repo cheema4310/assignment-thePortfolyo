@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import HeroSection from '../components/HeroSection/HeroSection';
 import Slider from '../components/Slider/Slider';
 import LoadingSpinner from '../components/shared/LoadingSpinner';
+import MultiLayer from '../components/HeroSection/MultiLayer';
+import FixedSidebar from '../components/Sidebar/FixedSidebar';
 
 export default function HomePage() {
   const [projects, setProjects] = useState(null);
@@ -20,12 +21,17 @@ export default function HomePage() {
     fetchProjects();
   }, []);
   return (
-    <div>
-      <HeroSection />
-
-      {projects ? <Slider projects={projects} /> : <LoadingSpinner />}
-
+    <>
+      {projects ? (
+        <div>
+          <FixedSidebar />
+          <MultiLayer projects={projects} />
+          <Slider projects={projects} />
+        </div>
+      ) : (
+        <LoadingSpinner />
+      )}
       <div className="w-full h-screen" />
-    </div>
+    </>
   );
 }

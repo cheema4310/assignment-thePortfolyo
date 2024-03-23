@@ -4,7 +4,7 @@ import { useRef } from 'react';
 const backImageUrl = require('../../assets/images/back1.png');
 const frontImageUrl = require('../../assets/images/front.png');
 
-export default function MultiLayer() {
+export default function MultiLayer({ projects }) {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -12,6 +12,38 @@ export default function MultiLayer() {
   });
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   const textY = useTransform(scrollYProgress, [0, 1], ['-50%', '400%']);
+
+  const headingVariants = {
+    hidden: {
+      opacity: 0,
+      y: -50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        type: 'spring',
+        stiffness: 100,
+      },
+    },
+  };
+  const subHeadingVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.1,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 2,
+        delay: 1,
+        type: 'spring',
+        stiffness: 100,
+      },
+    },
+  };
 
   return (
     <div
@@ -22,12 +54,22 @@ export default function MultiLayer() {
         style={{ y: textY }}
         className="relative z-10 text-darker text-center"
       >
-        <h2 className="my-heading-6xl text-navBg">John Doe</h2>
-        <p className="my-heading-normal">Software Developer</p>
-        <p className="my-para w-4/5 mx-auto">
-          From Los Angeles, America. I develop 3D visuals, user interfaces and
-          web applications
-        </p>
+        <motion.h2
+          variants={headingVariants}
+          initial="hidden"
+          animate="visible"
+          className="my-heading-8xl text-navBg"
+        >
+          John Doe
+        </motion.h2>
+        <motion.h2
+          variants={subHeadingVariants}
+          initial="hidden"
+          animate="visible"
+          className="my-heading"
+        >
+          Software Developer
+        </motion.h2>
       </motion.div>
       <motion.div
         className="absolute inset-0 z-0"

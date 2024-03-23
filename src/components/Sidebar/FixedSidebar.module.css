@@ -1,0 +1,71 @@
+.sideEmail {
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  z-index: 100;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.sideEmail > a {
+  text-decoration: none;
+  color: var(--slate);
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.sideEmail::after {
+  position: relative;
+  content: '';
+  display: inline-block;
+  height: 7rem;
+  width: 0.08rem;
+  background-color: #292929;
+  right: -0.2rem;
+  margin-top: 1rem;
+}
+
+.sideEmail:hover a {
+  color: var(--green);
+  font-size: 0.82rem;
+}
+
+.sideIcons {
+  position: fixed;
+  left: 5%;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.sideIcons a {
+  text-decoration: none;
+  color: var(--slate);
+  font-size: 1.2rem;
+}
+
+.sideIcons a:hover {
+  color: var(--green);
+}
+
+.sideIcons::after {
+  position: relative;
+  content: '';
+  display: inline-block;
+  height: 7rem;
+  width: 0.08rem;
+  background-color: #292929;
+  margin-top: 1rem;
+}
+
+@media (max-width: 800px) {
+  .sideBarWrapper {
+    display: none;
+  }
+}

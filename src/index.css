@@ -30,8 +30,11 @@ body {
   .my-heading {
     @apply font-modern font-bold text-4xl;
   }
-  .my-heading-6xl {
-    @apply font-modern font-extrabold text-6xl;
+  .my-heading-8xl {
+    @apply font-modern font-extrabold text-8xl;
+  }
+  .my-heading-5xl {
+    @apply font-modern font-extrabold text-5xl;
   }
   .my-heading-normal {
     @apply font-heading font-semibold text-2xl;

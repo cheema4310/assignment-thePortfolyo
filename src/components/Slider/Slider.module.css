@@ -23,7 +23,7 @@
   top: 0;
 }
 .slideTrack {
-  animation: sliding 800s linear infinite;
+  animation: sliding 100s linear infinite alternate;
 }
 
 .slideTrack:hover {
@@ -34,16 +34,7 @@
   0% {
     transform: translateX(0%);
   }
-  25% {
-    transform: translateX(calc(-100% + 100vw));
-  }
-  50% {
-    transform: translateX(0%);
-  }
-  75% {
-    transform: translateX(calc(-100% + 100vw));
-  }
   100% {
-    transform: translateX(0%);
+    transform: translateX(calc(-100% + 100vw));
   }
 }

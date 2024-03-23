@@ -1,6 +1,14 @@
+import { useLocation } from 'react-router-dom';
 import classes from './LoadingSpinner.module.css';
 
-export default function LoadingSpinner({ asOverlay }) {
+export default function LoadingSpinner() {
+  const location = useLocation();
+  let asOverlay = false;
+
+  if (location.pathname === '/') {
+    asOverlay = true;
+  }
+
   return (
     <div
       className={`${asOverlay ? classes.loadingSpinnerOverlay : classes.col} `}
