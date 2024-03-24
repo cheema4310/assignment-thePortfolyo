@@ -5,33 +5,14 @@
   z-index: 100;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 1.3rem;
-}
+  padding: 1.2rem 0.3rem 0 0.3rem;
+  border-radius: 10px 10px 0 0 / 10px 10px;
 
-.sideEmail > a {
-  text-decoration: none;
-  color: var(--slate);
-  font-weight: 300;
-  letter-spacing: 0.2rem;
-  font-size: 0.8rem;
-}
-
-.sideEmail::after {
-  position: relative;
-  content: '';
-  display: inline-block;
-  height: 7rem;
-  width: 0.08rem;
-  background-color: #292929;
-
-  margin-top: 1rem;
-}
-
-.sideEmail:hover a {
-  color: var(--green);
-  font-size: 0.82rem;
+  gap: 1.2rem;
+  background-color: #2929297b;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .sideIcons {
@@ -41,28 +22,43 @@
   z-index: 100;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   align-items: center;
-  gap: 1.3rem;
+  padding: 1.2rem 0.3rem 0 0.3rem;
+  border-radius: 10px 10px 0 0 / 10px 10px;
+
+  gap: 1.2rem;
+  background-color: #2929297b;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .sideIcons a {
   text-decoration: none;
-  color: var(--slate);
+  outline: none;
   font-size: 1.2rem;
 }
 
 .sideIcons a:hover {
   color: var(--green);
 }
+
+.sideEmail::after {
+  position: relative;
+  content: '';
+  display: inline-block;
+  height: 7rem;
+  width: 0.08rem;
+  background-color: #3d3d3d;
+}
+
 .sideIcons::after {
   position: relative;
   content: '';
   display: inline-block;
   height: 7rem;
   width: 0.08rem;
-  background-color: #292929;
-  margin-top: 1rem;
+  background-color: #3d3d3d;
 }
 
 @media (max-width: 800px) {

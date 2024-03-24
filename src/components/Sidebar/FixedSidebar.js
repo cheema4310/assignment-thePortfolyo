@@ -30,22 +30,24 @@ const FixedSidebar = ({ socialHandles }) => {
             <LinkedinIcon />
           </a>
         </div>
-        <div className={classes.sideUpwork}>
-          <a href={fetchUrl('Instagram')} target="_blank" rel="noreferrer">
-            <InstagramIcon />
-          </a>
-        </div>
         <div className={classes.sideTwitter}>
           <a href={fetchUrl('Twitter')} target="_blank" rel="noreferrer">
             <TwitterIcon />
           </a>
         </div>
+        <div className={classes.sideUpwork}>
+          <a href={fetchUrl('Instagram')} target="_blank" rel="noreferrer">
+            <InstagramIcon />
+          </a>
+        </div>
+
         <div className={classes.sideLinkedin}>
           <a href={fetchUrl('Facebook')} target="_blank" rel="noreferrer">
             <FacebookIcon />
           </a>
         </div>
       </div>
+
       <div className={classes.sideEmail}>
         <div className={classes.sideGithub}>
           <a href="#projects" target="_blank" rel="noreferrer">

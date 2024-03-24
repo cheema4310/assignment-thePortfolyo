@@ -39,12 +39,18 @@ function TestimonialsIcon() {
       variants={svgVariants}
       initial="hidden"
       animate="visible"
+      whileHover={{ scale: 1.2, transition: { duration: 0.5 } }}
+      whileTap={{
+        scale: 0.8,
+        outline: 'none',
+        transition: { duration: 0.5 },
+      }}
     >
       <motion.path
         variants={pathVariants}
         initial="hidden"
         animate="visible"
-        stroke="red"
+        stroke="#E6E6E6"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1"
