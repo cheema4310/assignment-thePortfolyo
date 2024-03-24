@@ -3,9 +3,11 @@
   right: 5%;
   bottom: 0;
   z-index: 100;
-  writing-mode: vertical-rl;
-  text-orientation: sideways-right;
-  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
 }
 
 .sideEmail > a {
@@ -23,7 +25,7 @@
   height: 7rem;
   width: 0.08rem;
   background-color: #292929;
-  right: -0.2rem;
+
   margin-top: 1rem;
 }
 
@@ -53,7 +55,6 @@
 .sideIcons a:hover {
   color: var(--green);
 }
-
 .sideIcons::after {
   position: relative;
   content: '';

@@ -5,28 +5,28 @@ import MultiLayer from '../components/HeroSection/MultiLayer';
 import FixedSidebar from '../components/Sidebar/FixedSidebar';
 
 export default function HomePage() {
-  const [projects, setProjects] = useState(null);
+  const [user, setUser] = useState(null);
   useEffect(() => {
-    const fetchProjects = async () => {
+    const fetchUser = async () => {
       try {
         const response = await fetch(
           'https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae'
         );
         const data = await response.json();
-        setProjects(data.user.projects);
+        setUser(data.user);
       } catch (error) {
         console.log(error.message);
       }
     };
-    fetchProjects();
+    fetchUser();
   }, []);
   return (
     <>
-      {projects ? (
+      {user ? (
         <div>
-          <FixedSidebar />
-          <MultiLayer projects={projects} />
-          <Slider projects={projects} />
+          <FixedSidebar socialHandles={user.social_handles} />
+          <MultiLayer userAbout={user.about} />
+          <Slider projects={user.projects} />
         </div>
       ) : (
         <LoadingSpinner />

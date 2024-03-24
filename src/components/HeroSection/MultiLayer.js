@@ -4,7 +4,7 @@ import { useRef } from 'react';
 const backImageUrl = require('../../assets/images/back1.png');
 const frontImageUrl = require('../../assets/images/front.png');
 
-export default function MultiLayer({ projects }) {
+export default function MultiLayer({ userAbout }) {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -24,6 +24,7 @@ export default function MultiLayer({ projects }) {
       transition: {
         duration: 1,
         type: 'spring',
+        damping: 5,
         stiffness: 100,
       },
     },
@@ -31,16 +32,16 @@ export default function MultiLayer({ projects }) {
   const subHeadingVariants = {
     hidden: {
       opacity: 0,
-      scale: 0.1,
+      scale: 0,
     },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 2,
+        duration: 0.5,
         delay: 1,
-        type: 'spring',
-        stiffness: 100,
+        ease: 'easeInOut',
+        // stiffness: 100,
       },
     },
   };
