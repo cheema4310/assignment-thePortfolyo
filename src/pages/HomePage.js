@@ -4,6 +4,7 @@ import LoadingSpinner from '../components/shared/LoadingSpinner';
 import MultiLayer from '../components/HeroSection/MultiLayer';
 import FixedSidebar from '../components/Sidebar/FixedSidebar';
 import Services from '../components/Services';
+import Skills from '../components/Skills';
 
 export default function HomePage() {
   const [user, setUser] = useState(null);
@@ -29,6 +30,7 @@ export default function HomePage() {
           <MultiLayer userAbout={user.about} />
           <Slider projects={user.projects} />
           <Services services={user.services} />
+          <Skills />
         </div>
       ) : (
         <LoadingSpinner />

@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        outline: '0px 0px 2.5px 2.5px rgba(14, 243, 197, 0.2)',
+        outline: '0px 0px 2.5px 2.5px rgba(172, 136, 91, 0.2)',
       },
       colors: {
         lightest: '#E6E6E6',
@@ -13,8 +13,8 @@ module.exports = {
         dark: '#3D3D3D',
         darker: '#292929',
         darkest: '#1A1A1A',
-        navBg: '#010101',
-        green: '#0EF3C5',
+        textColor: '#AC885B',
+        glass: '#1A1A1Ac1',
       },
       fontFamily: {
         heading: ['Poppins', 'sans-serif'],
