@@ -23,7 +23,7 @@
   top: 0;
 }
 .slideTrack {
-  animation: sliding 100s linear infinite alternate;
+  animation: sliding 200s linear infinite alternate;
 }
 
 .slideTrack:hover {

@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      boxShadow: {
+        outline: '0px 0px 2.5px 2.5px rgba(14, 243, 197, 0.2)',
+      },
       colors: {
         lightest: '#E6E6E6',
         lighter: '#B0B0B0',
@@ -11,6 +14,7 @@ module.exports = {
         darker: '#292929',
         darkest: '#1A1A1A',
         navBg: '#010101',
+        green: '#0EF3C5',
       },
       fontFamily: {
         heading: ['Poppins', 'sans-serif'],

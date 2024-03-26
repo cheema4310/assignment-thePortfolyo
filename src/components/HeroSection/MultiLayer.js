@@ -1,6 +1,5 @@
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
-import TextTyping from './TextTyping/TextTyping';
 
 const backImageUrl = require('../../assets/images/back1.png');
 const frontImageUrl = require('../../assets/images/front.png');
@@ -31,22 +30,6 @@ export default function MultiLayer({ userAbout }) {
       },
     },
   };
-  const subHeadingVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        delay: 2,
-        ease: 'easeInOut',
-        // stiffness: 100,
-      },
-    },
-  };
 
   return (
     <div
@@ -60,18 +43,18 @@ export default function MultiLayer({ userAbout }) {
         <motion.h2
           initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
           animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
           className="my-heading-8xl text-navBg"
         >
           John Doe
         </motion.h2>
         <motion.h2
-        // variants={headingVariants}
-        // initial="hidden"
-        // animate="visible"
-        // className="my-heading"
+          variants={headingVariants}
+          initial="hidden"
+          animate="visible"
+          className="my-heading"
         >
-          <TextTyping text="I'm a " />
+          Software Developer
         </motion.h2>
       </motion.div>
       <motion.div

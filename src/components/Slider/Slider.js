@@ -13,7 +13,7 @@ export default function Slider({ projects }) {
             <img
               src={project.image.url}
               key={index}
-              className="w-full duration-700 hover:scale-110 border-darker border-[8px] rounded-lg"
+              className="w-full duration-700 hover:scale-110 border-darker border-[8px] rounded-lg shadow-outline"
               alt={index}
             />
           </div>
