@@ -22,6 +22,15 @@ module.exports = {
         btn: ['Nunito', 'sans-serif'],
         modern: ['Exo', 'sans-serif'],
       },
+      animation: {
+        moveline: 'moveline 7s linear forwards',
+      },
+      keyframes: {
+        moveline: {
+          '0%': { height: '0%' },
+          '100%': { height: '100%' },
+        },
+      },
     },
   },
   plugins: [],

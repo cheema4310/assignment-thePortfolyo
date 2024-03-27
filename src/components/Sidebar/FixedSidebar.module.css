@@ -1,6 +1,6 @@
 .sideEmail {
   position: fixed;
-  right: 5%;
+  right: 4%;
   bottom: 0;
   z-index: 100;
   display: flex;
@@ -17,7 +17,7 @@
 
 .sideIcons {
   position: fixed;
-  left: 5%;
+  left: 4%;
   bottom: 0;
   z-index: 100;
   display: flex;

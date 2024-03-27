@@ -36,7 +36,7 @@ export default function Services({ services }) {
   };
   return (
     <div className="w-4/5 mx-auto">
-      <h2 className="my-heading text-center py-20">Services</h2>
+      <h2 className="my-heading-5xl text-center py-20">Services</h2>
       <div className="grid grid-cols-6 grid-rows-5 gap-6 lg:h-[150vh] w-full">
         {services.map((service, index) => (
           <Service key={index} service={service} index={index} />
