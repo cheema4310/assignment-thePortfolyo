@@ -10,8 +10,20 @@ import TestimonialsIcon from './icons/TestimonialsIcon';
 
 // CSS
 import classes from './FixedSidebar.module.css';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { useState } from 'react';
 
 const FixedSidebar = ({ socialHandles }) => {
+  const [show, setShow] = useState(false);
+  const { scrollY } = useScroll();
+  const getValue = (val) => {
+    if (val > 760) {
+      setShow(true);
+    } else if (val < 760) {
+      setShow(false);
+    }
+  };
+  useMotionValueEvent(scrollY, 'change', getValue);
   function fetchUrl(platform) {
     let requiredUrl;
     socialHandles.forEach((social) => {
@@ -23,7 +35,16 @@ const FixedSidebar = ({ socialHandles }) => {
   }
 
   return (
-    <div className={classes.sideBarWrapper}>
+    <motion.div
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }}
+      initial="hidden"
+      animate={show ? 'visible' : 'hidden'}
+      transition={{ duration: 0.5 }}
+      className={classes.sideBarWrapper}
+    >
       <div className={classes.sideIcons}>
         <div className={classes.sideGithub}>
           <a href={fetchUrl('LinkedIn')} target="_blank" rel="noreferrer">
@@ -70,7 +91,7 @@ const FixedSidebar = ({ socialHandles }) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

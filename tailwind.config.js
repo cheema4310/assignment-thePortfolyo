@@ -24,11 +24,20 @@ module.exports = {
       },
       animation: {
         moveline: 'moveline 7s linear forwards',
+        cursor: 'cursor 4s steps(18) infinite',
+        slide: 'slide 12s steps(3) infinite',
       },
       keyframes: {
         moveline: {
           '0%': { height: '0%' },
           '100%': { height: '100%' },
+        },
+        cursor: {
+          '40%, 60%': { left: '100%' },
+          '100%': { left: '0%' },
+        },
+        slide: {
+          '100%': { top: '-180px' },
         },
       },
     },

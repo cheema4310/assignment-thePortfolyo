@@ -28,7 +28,7 @@ export default function HomePage() {
     <>
       {user ? (
         <div>
-          {/* <FixedSidebar socialHandles={user.social_handles} /> */}
+          <FixedSidebar socialHandles={user.social_handles} />
           <HeroSection about={user.about} />
           <Slider projects={user.projects} />
           <Services services={user.services} />

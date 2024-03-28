@@ -1,5 +1,4 @@
 export default function Services({ services }) {
-  console.log(services);
   const Service = ({ service, index }) => {
     const addClass = index === 4 ? 'order-last' : '';
     return (
