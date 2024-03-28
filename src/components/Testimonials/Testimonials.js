@@ -1,21 +1,12 @@
-import QuoteSVG from './QuoteSVG';
+import ReviewCard from './ReviewCard';
 
 export default function Testimonials({ testimonials }) {
   console.log(testimonials);
   return (
-    <div>
-      <div>
-        {testimonials.map((review, index) => (
-          <div key={index} className="bg-light">
-            <div>
-              <QuoteSVG />
-            </div>
-            <p>desc</p>
-            <p>name</p>
-            <div>
-              <img alt="user" />
-            </div>
-          </div>
+    <div className="w-3/4 mx-auto">
+      <div className="grid grid-cols-3 gap-8">
+        {testimonials.map((testi, index) => (
+          <ReviewCard key={index} testi={testi} index={index} />
         ))}
       </div>
     </div>

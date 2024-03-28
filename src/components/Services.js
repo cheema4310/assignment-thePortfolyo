@@ -22,7 +22,7 @@ export default function Services({ services }) {
             <h2 className="py-4 text-2xl text-center font-modern font-bold text-lighter">
               {service.name}
             </h2>
-            <p className="px-4 flex-1 my-flex text-lg text-center text-lighter font-btn border-b-8 border-darkest">
+            <p className="px-4 flex-1 my-flex text-lg text-center text-lighter font-btn border-b-4 border-darkest">
               {service.desc}
             </p>
             <div className="py-4 px-4 my-flex justify-between font-modern text-lg">

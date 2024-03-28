@@ -1,16 +1,27 @@
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Nav() {
   return (
     <nav className="">
       <div className="my-flex justify-between w-4/5 h-24 mx-auto">
         <div className="group cursor-pointer">
-          <h2 className="my-heading text-lighter hover:text-lightest">
+          <motion.h2
+            initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
+            animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+            className="my-heading text-lighter hover:text-lightest"
+          >
             John Doe
-          </h2>
-          <p className="font-medium font-btn text-base text-lighter group-hover:text-lightest">
-            Web Developer + Designer
-          </p>
+          </motion.h2>
+          <motion.p
+            initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
+            animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
+            transition={{ duration: 2, delay: 1 }}
+            className="font-medium font-btn text-base text-lighter group-hover:text-lightest"
+          >
+            Software Developer + Designer
+          </motion.p>
         </div>
 
         <div className="my-flex justify-around gap-6">
