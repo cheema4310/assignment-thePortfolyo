@@ -8,6 +8,8 @@ import Timeline from '../components/Timeline/Timeline';
 import Testimonials from '../components/Testimonials/Testimonials';
 import HeroSection from '../components/HeroSection/HeroSection';
 import About from '../components/About/About';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 
 export default function HomePage() {
   const [user, setUser] = useState(null);
@@ -29,6 +31,7 @@ export default function HomePage() {
     <>
       {user ? (
         <div>
+          <Nav name={user.about.name} />
           <FixedSidebar socialHandles={user.social_handles} />
           <HeroSection about={user.about} />
           <Slider projects={user.projects} />
@@ -37,11 +40,11 @@ export default function HomePage() {
           <Skills skills={user.skills} />
           <Testimonials testimonials={user.testimonials} />
           <About about={user.about} />
+          <Footer href={user.about.contactEmail} />
         </div>
       ) : (
         <LoadingSpinner />
       )}
-      <div className="w-full h-screen" />
     </>
   );
 }

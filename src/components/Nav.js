@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-export default function Nav() {
+export default function Nav({ name }) {
   return (
     <nav className="">
       <div className="my-flex justify-between w-4/5 h-24 mx-auto">
@@ -10,9 +10,9 @@ export default function Nav() {
             initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
             animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
             transition={{ duration: 1.5, delay: 0.5 }}
-            className="my-heading text-lighter hover:text-lightest"
+            className="my-heading text-lighter hover:text-lightest capitalize"
           >
-            John Doe
+            {name}
           </motion.h2>
           <motion.p
             initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
