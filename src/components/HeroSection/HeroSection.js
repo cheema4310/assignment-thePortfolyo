@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import bgImg from '../../assets/images/check.svg';
 import Nav from '../Nav';
+import Button from '../shared/Button';
 
 export default function HeroSection({ about }) {
   // Requirement: Data Storage
@@ -53,12 +54,12 @@ export default function HeroSection({ about }) {
         style={{ backgroundImage: `url(${bgImg})` }}
         className="w-full h-screen bg-no-repeat bg-contain bg-right"
       >
-        <div className="flex flex-col items-center h-full w-3/4 mx-auto text-lighter">
+        <div className="flex flex-col items-center gap-16 py-20 h-full w-3/4 mx-auto text-lighter">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={imageVariants}
-            className="w-20 h-20 my-16 self-start"
+            className="w-20 h-20 self-start"
           >
             <img
               src={about.avatar.url}
@@ -66,6 +67,7 @@ export default function HeroSection({ about }) {
               alt="avatar"
             />
           </motion.div>
+
           <motion.div
             variants={headingVariants}
             initial="hidden"
@@ -85,14 +87,9 @@ export default function HeroSection({ about }) {
             </ul>
           </motion.div>
 
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.2 }}
-            className="my-btn mt-24"
-          >
+          <Button href={about.contactEmail} width={240} height={60}>
             ask@johndoe.com
-          </motion.button>
+          </Button>
         </div>
       </div>
     </div>

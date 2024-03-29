@@ -1,0 +1,40 @@
+.animateBtn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background-color: #292929;
+  border-radius: 0.7rem/0.7rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: 'Nunito', sans-serif;
+  transition: 0.3;
+}
+
+.animateBtn::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #ac885b;
+  border-radius: 0.75rem/0.75rem;
+  z-index: -1;
+  transition: 0.3;
+  animation: animateBtn 2s linear infinite;
+}
+.specialBtn::before {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+}
+.animateBtn:hover::before {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+}
+.animateBtn:hover {
+  color: #ac885b;
+}
+
+@keyframes animateBtn {
+  50% {
+    filter: hue-rotate(350deg);
+  }
+}

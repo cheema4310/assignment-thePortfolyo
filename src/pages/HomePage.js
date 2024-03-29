@@ -7,6 +7,7 @@ import Skills from '../components/Skills/Skills';
 import Timeline from '../components/Timeline/Timeline';
 import Testimonials from '../components/Testimonials/Testimonials';
 import HeroSection from '../components/HeroSection/HeroSection';
+import About from '../components/About/About';
 
 export default function HomePage() {
   const [user, setUser] = useState(null);
@@ -35,6 +36,7 @@ export default function HomePage() {
           <Timeline timeline={user.timeline} />
           <Skills skills={user.skills} />
           <Testimonials testimonials={user.testimonials} />
+          <About about={user.about} />
         </div>
       ) : (
         <LoadingSpinner />
