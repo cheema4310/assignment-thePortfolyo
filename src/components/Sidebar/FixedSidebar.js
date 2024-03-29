@@ -42,29 +42,30 @@ const FixedSidebar = ({ socialHandles }) => {
       }}
       initial="hidden"
       animate={show ? 'visible' : 'hidden'}
+      exit="hidden"
       transition={{ duration: 0.5 }}
       className={classes.sideBarWrapper}
     >
       <div className={classes.sideIcons}>
         <div className={classes.sideGithub}>
           <a href={fetchUrl('LinkedIn')} target="_blank" rel="noreferrer">
-            <LinkedinIcon />
+            <LinkedinIcon show={show} />
           </a>
         </div>
         <div className={classes.sideTwitter}>
           <a href={fetchUrl('Twitter')} target="_blank" rel="noreferrer">
-            <TwitterIcon />
+            <TwitterIcon show={show} />
           </a>
         </div>
         <div className={classes.sideUpwork}>
           <a href={fetchUrl('Instagram')} target="_blank" rel="noreferrer">
-            <InstagramIcon />
+            <InstagramIcon show={show} />
           </a>
         </div>
 
         <div className={classes.sideLinkedin}>
           <a href={fetchUrl('Facebook')} target="_blank" rel="noreferrer">
-            <FacebookIcon />
+            <FacebookIcon show={show} />
           </a>
         </div>
       </div>
@@ -72,22 +73,22 @@ const FixedSidebar = ({ socialHandles }) => {
       <div className={classes.sideEmail}>
         <div className={classes.sideGithub}>
           <a href="#projects" target="_blank" rel="noreferrer">
-            <ProjectsIcon />
+            <ProjectsIcon show={show} />
           </a>
         </div>
         <div className={classes.sideUpwork}>
           <a href="#services" target="_blank" rel="noreferrer">
-            <ServicesIcon />
+            <ServicesIcon show={show} />
           </a>
         </div>
         <div className={classes.sideTwitter}>
           <a href="#testimonials" target="_blank" rel="noreferrer">
-            <TestimonialsIcon />
+            <TestimonialsIcon show={show} />
           </a>
         </div>
         <div className={classes.sideLinkedin}>
           <a href="#about" target="_blank" rel="noreferrer">
-            <AboutIcon />
+            <AboutIcon show={show} />
           </a>
         </div>
       </div>

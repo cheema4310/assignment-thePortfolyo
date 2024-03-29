@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-function LinkedinIcon() {
+function LinkedinIcon({ show }) {
   const svgVariants = {
     hidden: {
       rotate: 180,
@@ -45,7 +45,7 @@ function LinkedinIcon() {
     <motion.svg
       variants={svgVariants}
       initial="hidden"
-      animate="visible"
+      animate={show ? 'visible' : 'hidden'}
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
@@ -61,7 +61,7 @@ function LinkedinIcon() {
       <motion.path
         variants={pathVariantsTwo}
         initial="hidden"
-        animate="visible"
+        animate={show ? 'visible' : 'hidden'}
         stroke="#E6E6E6"
         strokeWidth="1"
         fillRule="evenodd"

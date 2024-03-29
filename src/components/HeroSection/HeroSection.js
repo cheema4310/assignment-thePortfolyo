@@ -26,6 +26,19 @@ export default function HeroSection({ about }) {
       clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
       transition: {
         delay: 3,
+        duration: 1,
+      },
+    },
+  };
+  // Profile image variants
+  const imageVariants = {
+    hidden: {
+      clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
+    },
+    visible: {
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      transition: {
+        delay: 2,
         duration: 0.5,
       },
     },
@@ -41,13 +54,18 @@ export default function HeroSection({ about }) {
         className="w-full h-screen bg-no-repeat bg-contain bg-right"
       >
         <div className="flex flex-col items-center h-full w-3/4 mx-auto text-lighter">
-          <div className="w-20 h-20 my-16 self-start">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={imageVariants}
+            className="w-20 h-20 my-16 self-start"
+          >
             <img
               src={about.avatar.url}
               className="w-full h-full rounded-full object-cover border-2 border-textColor"
               alt="avatar"
             />
-          </div>
+          </motion.div>
           <motion.div
             variants={headingVariants}
             initial="hidden"

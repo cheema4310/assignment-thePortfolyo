@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-function TwitterIcon() {
+function TwitterIcon({ show }) {
   const svgVariants = {
     hidden: {
       rotate: 180,
@@ -36,14 +36,14 @@ function TwitterIcon() {
       viewBox="0 0 24 24"
       variants={svgVariants}
       initial="hidden"
-      animate="visible"
+      animate={show ? 'visible' : 'hidden'}
       whileHover={{ scale: 1.2, transition: { duration: 0.5 } }}
       whileTap={{ scale: 0.8, outline: 'none', transition: { duration: 0.5 } }}
     >
       <motion.path
         variants={pathVariants}
         initial="hidden"
-        animate="visible"
+        animate={show ? 'visible' : 'hidden'}
         fillOpacity="0.6"
         stroke="#E6E6E6"
         strokeWidth="1"

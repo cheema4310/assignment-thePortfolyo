@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-function AboutIcon() {
+function AboutIcon({ show }) {
   const svgVariants = {
     hidden: {
       rotate: -180,
@@ -37,7 +37,7 @@ function AboutIcon() {
       viewBox="0 0 24 24"
       variants={svgVariants}
       initial="hidden"
-      animate="visible"
+      animate={show ? 'visible' : 'hidden'}
       whileHover={{ scale: 1.2, transition: { duration: 0.5 } }}
       whileTap={{
         scale: 0.8,
@@ -48,7 +48,7 @@ function AboutIcon() {
       <motion.path
         variants={pathVariants}
         initial="hidden"
-        animate="visible"
+        animate={show ? 'visible' : 'hidden'}
         whileHover={{ scale: 1.2, transition: { duration: 1 } }}
         whileTap={{ scale: 0.8, transition: { duration: 1 } }}
         stroke="#E6E6E6"

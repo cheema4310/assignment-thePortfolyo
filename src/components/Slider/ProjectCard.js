@@ -1,8 +1,14 @@
+import { Link } from 'react-router-dom';
+
 export default function ProjectCard({ project, index }) {
   const techString = project.techStack.join();
   const desiredOutput = techString.replace(/,/g, '-');
+
   return (
-    <div className="w-[480px] h-96 flex items-center px-6 overflow-hidden">
+    <Link
+      to={project.liveurl}
+      className="w-[480px] h-96 flex items-center px-6 overflow-hidden"
+    >
       <div className="w-[480px] relative duration-700 hover:scale-110">
         <img
           src={project.image.url}
@@ -14,6 +20,6 @@ export default function ProjectCard({ project, index }) {
           {desiredOutput}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

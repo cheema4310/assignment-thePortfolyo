@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-function ServicesIcon() {
+function ServicesIcon({ show }) {
   const svgVariants = {
     hidden: {
       rotate: -180,
@@ -38,7 +38,7 @@ function ServicesIcon() {
       viewBox="0 0 24 24"
       variants={svgVariants}
       initial="hidden"
-      animate="visible"
+      animate={show ? 'visible' : 'hidden'}
       whileHover={{ scale: 1.2, transition: { duration: 0.5 } }}
       whileTap={{
         scale: 0.8,
@@ -49,7 +49,7 @@ function ServicesIcon() {
       <motion.path
         variants={pathVariants}
         initial="hidden"
-        animate="visible"
+        animate={show ? 'visible' : 'hidden'}
         stroke="#E6E6E6"
         strokeLinecap="round"
         strokeWidth="1"
