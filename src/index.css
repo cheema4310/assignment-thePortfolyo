@@ -13,9 +13,19 @@
 }
 body {
   background-color: #1a1a1a;
-
-  color: #e6e6e6cb;
   color: rgb(172, 136, 91);
+}
+
+/* ------Custom Scrollbar------ */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #292929;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(172, 136, 91);
+  border-radius: 0.5rem/0.5rem;
 }
 
 @layer components {

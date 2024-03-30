@@ -11,8 +11,9 @@ export default function Footer({ href }) {
           Say Hello
         </Button>
       </div>
-      <div className="bg-darker text-center py-3 text-sm font-modern font-light">
-        Designed & Built by Zubair Cheema
+      <div className="text-center py-3 text-sm font-modern font-light">
+        Designed & Built by{' '}
+        <span className="text-textColor font-semibold">Zubair Cheema</span>
       </div>
     </div>
   );
