@@ -8,7 +8,7 @@ import Timeline from '../components/Timeline/Timeline';
 import Testimonials from '../components/Testimonials/Testimonials';
 import HeroSection from '../components/HeroSection/HeroSection';
 import About from '../components/About/About';
-import Nav from '../components/Nav';
+import Nav from '../components/Navbar/Nav';
 import Footer from '../components/Footer';
 
 export default function HomePage() {

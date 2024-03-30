@@ -4,8 +4,8 @@
 }
 
 .sp {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   clear: both;
   margin: 0 auto;
 }
@@ -18,7 +18,7 @@
 .sp-wave:before,
 .sp-wave:after {
   content: '';
-  border: 1px #e6e6e6 solid;
+  border: 1px #ac885b solid;
   border-radius: 50%;
   width: 100%;
   height: 100%;

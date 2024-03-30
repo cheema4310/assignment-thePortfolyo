@@ -1,10 +1,16 @@
-import { NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+
+import NavLinks from './NavLinks';
+import MenuIcon from './MenuIcon';
+import MobileMenu from './MobileMenu';
 
 export default function Nav({ name }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="">
-      <div className="my-flex justify-between w-4/5 h-24 mx-auto">
+      <div className="my-flex justify-between w-11/12 lg:w-4/5 h-24 mx-auto">
         <div className="group cursor-pointer">
           <motion.h2
             initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
@@ -24,20 +30,15 @@ export default function Nav({ name }) {
           </motion.p>
         </div>
 
-        <div className="my-flex justify-around gap-6">
-          <NavLink to="#projects" className="my-navlink">
-            Projects
-          </NavLink>
-          <NavLink to="#services" className="my-navlink">
-            Services
-          </NavLink>
-          <NavLink to="#testimonials" className="my-navlink">
-            Testimonials
-          </NavLink>
-          <NavLink to="#about" className="my-navlink">
-            About
-          </NavLink>
+        <div className="hidden lg:block">
+          <NavLinks />
         </div>
+        <div className="lg:hidden" onClick={() => setIsOpen(true)}>
+          <MenuIcon />
+        </div>
+        <AnimatePresence>
+          {isOpen && <MobileMenu onClose={() => setIsOpen(false)} />}
+        </AnimatePresence>
       </div>
     </nav>
   );

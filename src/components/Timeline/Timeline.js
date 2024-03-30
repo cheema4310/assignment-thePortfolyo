@@ -13,8 +13,8 @@ export default function Timeline({ timeline }) {
       </h2>
       <div
         ref={timelineRef}
-        className={`relative w-4/5 mx-auto after:content-[''] after:absolute after:w-px after:h-full after:top-0 after:left-1/2 after:bg-dark after:-ml-[0.5px] after:-z-10 ${
-          isInView && 'after:animate-moveline'
+        className={`relative w-11/12 lg:w-4/5 mx-auto lg:after:content-[''] lg:after:absolute lg:after:w-px lg:after:h-full lg:after:top-0 lg:after:left-1/2 lg:after:bg-dark lg:after:-ml-[0.5px] lg:after:-z-10 ${
+          isInView && 'lg:after:animate-moveline'
         }`}
       >
         {timeline.map((job, index) => (

@@ -1,4 +1,4 @@
-.sideEmail {
+.sideNav {
   position: fixed;
   right: 4%;
   bottom: 0;
@@ -43,7 +43,7 @@
   color: var(--green);
 }
 
-.sideEmail::after {
+.sideNav::after {
   position: relative;
   content: '';
   display: inline-block;

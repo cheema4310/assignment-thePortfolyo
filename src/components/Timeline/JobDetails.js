@@ -9,11 +9,6 @@ export default function JobDetails({ job, index }) {
   const endDateMonth = endDate.slice(4, 7);
   const endDateYear = endDate.slice(11);
 
-  //   const startDateYear = new Date(job.startDate).getFullYear();
-  //   const startDateMonth = new Date(job.startDate).getMonth();
-  //   const endDateYear = new Date(job.endDate).getFullYear();
-  //   const endDateMonth = new Date(job.endDate).getMonth();
-
   const outputDate = `${startDateMonth} ${startDateYear} - ${endDateMonth} ${endDateYear}`;
 
   const boxVariant = {
@@ -41,17 +36,17 @@ export default function JobDetails({ job, index }) {
       whileInView="visible"
       viewport={{ once: true }}
       className={`${
-        index % 2 === 0 ? 'left-0' : 'left-1/2'
-      } relative w-1/2 py-3 px-12`}
+        index % 2 === 0 ? 'left-0' : 'left-0 lg:left-1/2'
+      } relative w-full lg:w-1/2 py-3 px-3 lg:px-12`}
     >
       <div
-        className={`absolute ${
+        className={`hidden lg:block absolute ${
           index % 2 === 0 ? '-right-[6px]' : '-left-[6px]'
         }  top-8 w-3 h-3 bg-textColor rounded-full z-10`}
       />
       <div
         className={`${
-          index % 2 === 0 && 'text-end'
+          index % 2 === 0 && 'lg:text-end'
         } relative py-3 px-7 text-light`}
       >
         <h2 className="my-heading text-textColor">{job.jobTitle}</h2>

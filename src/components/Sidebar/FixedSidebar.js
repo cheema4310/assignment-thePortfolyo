@@ -47,50 +47,38 @@ const FixedSidebar = ({ socialHandles }) => {
       className={classes.sideBarWrapper}
     >
       <div className={classes.sideIcons}>
-        <div className={classes.sideGithub}>
-          <a href={fetchUrl('LinkedIn')} target="_blank" rel="noreferrer">
-            <LinkedinIcon show={show} />
-          </a>
-        </div>
-        <div className={classes.sideTwitter}>
-          <a href={fetchUrl('Twitter')} target="_blank" rel="noreferrer">
-            <TwitterIcon show={show} />
-          </a>
-        </div>
-        <div className={classes.sideUpwork}>
-          <a href={fetchUrl('Instagram')} target="_blank" rel="noreferrer">
-            <InstagramIcon show={show} />
-          </a>
-        </div>
+        <a href={fetchUrl('LinkedIn')}>
+          <LinkedinIcon show={show} />
+        </a>
 
-        <div className={classes.sideLinkedin}>
-          <a href={fetchUrl('Facebook')} target="_blank" rel="noreferrer">
-            <FacebookIcon show={show} />
-          </a>
-        </div>
+        <a href={fetchUrl('Twitter')}>
+          <TwitterIcon show={show} />
+        </a>
+
+        <a href={fetchUrl('Instagram')}>
+          <InstagramIcon show={show} />
+        </a>
+
+        <a href={fetchUrl('Facebook')}>
+          <FacebookIcon show={show} />
+        </a>
       </div>
 
-      <div className={classes.sideEmail}>
-        <div className={classes.sideGithub}>
-          <a href="#projects" target="_blank" rel="noreferrer">
-            <ProjectsIcon show={show} />
-          </a>
-        </div>
-        <div className={classes.sideUpwork}>
-          <a href="#services" target="_blank" rel="noreferrer">
-            <ServicesIcon show={show} />
-          </a>
-        </div>
-        <div className={classes.sideTwitter}>
-          <a href="#testimonials" target="_blank" rel="noreferrer">
-            <TestimonialsIcon show={show} />
-          </a>
-        </div>
-        <div className={classes.sideLinkedin}>
-          <a href="#about" target="_blank" rel="noreferrer">
-            <AboutIcon show={show} />
-          </a>
-        </div>
+      <div className={classes.sideNav}>
+        <a href="/#projects">
+          <ProjectsIcon show={show} />
+        </a>
+        <a href="/#services">
+          <ServicesIcon show={show} />
+        </a>
+
+        <a href="/#testimonials">
+          <TestimonialsIcon show={show} />
+        </a>
+
+        <a href="/#about">
+          <AboutIcon show={show} />
+        </a>
       </div>
     </motion.div>
   );
