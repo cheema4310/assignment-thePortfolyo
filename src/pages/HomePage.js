@@ -15,10 +15,9 @@ export default function HomePage() {
   const [user, setUser] = useState(null);
   useEffect(() => {
     const fetchUser = async () => {
+      // 'data.json' file is located in "public/" fetching data locally
       try {
-        const response = await fetch(
-          'https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae'
-        );
+        const response = await fetch('/data.json');
         const data = await response.json();
         setUser(data.user);
       } catch (error) {
