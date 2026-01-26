@@ -1,3 +1,5 @@
+import JohnDoe from '../../assets/images/john.jpeg';
+
 export default function About({ about }) {
   return (
     <section id="about" className="w-11/12 lg:w-4/5 mx-auto">
@@ -11,7 +13,8 @@ export default function About({ about }) {
         <div className="col-span-2 row-span-2 lg:row-span-3 bg-darker rounded-2xl lg:p-12 my-flex">
           <div className="w-44 h-44">
             <img
-              src={about.avatar.url}
+              // src={about.avatar.url}
+              src={JohnDoe}
               className="w-full h-full rounded-full object-cover"
               alt="avatar"
             />

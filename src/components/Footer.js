@@ -13,7 +13,14 @@ export default function Footer({ href }) {
       </div>
       <div className="text-center py-3 text-sm font-modern font-light">
         Designed & Built by{' '}
-        <span className="text-textColor font-semibold">Zubair Cheema</span>
+        <a
+          href="https://zubair-cheema.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-textColor font-semibold"
+        >
+          Zubair Cheema
+        </a>
       </div>
     </div>
   );

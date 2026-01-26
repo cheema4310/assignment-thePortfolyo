@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import bgImg from '../../assets/images/check.svg';
 
 import Button from '../shared/Button';
+import johnDoe from '../../assets/images/john.jpeg';
 
 export default function HeroSection({ about }) {
   // Requirement: Data Storage
@@ -60,8 +61,9 @@ export default function HeroSection({ about }) {
               className="w-20 h-20"
             >
               <img
-                src={about.avatar.url}
-                className="w-full h-full rounded-full object-cover border-2 border-textColor"
+                // src={about.avatar.url}
+                src={johnDoe}
+                className="w-full h-full rounded-full object-cover border-4 border-textColor"
                 alt="avatar"
               />
             </motion.div>
