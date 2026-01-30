@@ -38,6 +38,3 @@ Feel free to fork and submit pull requests.
 ## ⭐ Show your support
 
 Give a ⭐ if this project helped you or you liked the design!
-
-Copy-paste kar do bhai, 100% perfect lage ga! 🔥
-```
